@@ -105,7 +105,7 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 		}));
 
 		if (trimmedTargets) {
-			setTargets((prevTargets) => [...prevTargets, ...trimmedTargets]);
+			setTargets(trimmedTargets); // set new filter data only
 		}
 	};
 
@@ -181,7 +181,7 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 	);
 
 	const removeSelectedTargets = async () => {
-    // @TODO not done
+		// @TODO not done
 	};
 
 	const handleCloseModal = (
@@ -252,6 +252,7 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 				isOpen={isAddTargetsModalOpen}
 				onClose={handleCloseModal}
 				isInternal={project?.type === PROJECT_TYPE.INTERNAL_SCAN}
+				mutateMainTabel={mutate}
 			/>
 		</>
 	);
@@ -260,4 +261,3 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 export default ScansTargetsPage;
 
 (ScansTargetsPage as any).layout = Admin;
-

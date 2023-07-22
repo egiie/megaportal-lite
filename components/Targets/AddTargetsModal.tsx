@@ -16,7 +16,6 @@ import { FormikHelpers, useFormik } from 'formik';
 import uniqBy from 'lodash/uniqBy';
 import { useRouter } from 'next/router';
 
-
 import { useLoadingProgress } from 'components/Loading/LoadingProgress';
 import {
 	AddTargetsForm,
@@ -42,6 +41,7 @@ export interface AddTargetsModalProps {
 	isOpen: boolean;
 	isInternal: boolean;
 	onClose: () => void;
+	mutateMainTabel: () => void;
 }
 
 export interface Item {
@@ -55,6 +55,7 @@ export function AddTargetsModal({
 	isOpen,
 	isInternal,
 	onClose,
+	mutateMainTabel,
 }: AddTargetsModalProps) {
 	// hooks
 	const router = useRouter();
@@ -215,6 +216,7 @@ export function AddTargetsModal({
 					});
 				})
 				.finally(() => {
+					mutateMainTabel(); //update mutate data target main table
 					done({ name: 'CREATE_TARGETS_MUTATION', type: 2 });
 				});
 
