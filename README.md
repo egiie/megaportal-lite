@@ -7,11 +7,11 @@ Here is the video link of the result of fixing the issue where data was not upda
 ## Bug 2 
 **Duplication of data when clicking the sync target button**
 The cause of the error is that during the useEffect of fetchTarget, there was an error in setting the state on target, resulting in the previously entered data causing data duplication.
-***link video hasil fixing duplikasi data stelah klik tombol sync: https://www.awesomescreenshot.com/video/19335023?key=977fb70067bfd2bea64560b1f137c1a6***
+***Video link of the result after fixing data duplication issue upon clicking the sync button: https://www.awesomescreenshot.com/video/19335023?key=977fb70067bfd2bea64560b1f137c1a6***
 
 This bug 2 also causes another issue, which is the pagination not working perfectly
-***link video bug dari pagination : https://www.awesomescreenshot.com/video/19334882?key=7b8e67e768d2ffdfca8eaa2914087e34***
+***Video link of the pagination bug : https://www.awesomescreenshot.com/video/19334882?key=7b8e67e768d2ffdfca8eaa2914087e34***
 ***link video fixing bug dari pagination : https://www.awesomescreenshot.com/video/19335179?key=cb18c5186753467c409c6fdbba90198a***
 
-
-
+## Commit fixing
+https://github.com/egiie/megaportal-lite/commit/2167ca936970297c4a7254fbb8d1a014f6e3ca6a
